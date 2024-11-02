@@ -11,7 +11,13 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final List<String> countryCodes = ["+1", "(+91)", "(+44)", "(+61)", "(+49)"];
+  final List<String> countryCodes = [
+    "(+01)",
+    "(+91)",
+    "(+44)",
+    "(+61)",
+    "(+49)"
+  ];
   String selectedCountryCode = "(+01)";
   @override
   Widget build(BuildContext context) {
@@ -20,14 +26,14 @@ class _LoginScreenState extends State<LoginScreen> {
       children: [
         Container(
           decoration: const BoxDecoration(
-            gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              Color(0xFF140034), 
-              Color(0xFF01010D ),
-            ],
-          ),
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Color(0xFF140034),
+                  Color(0xFF01010D),
+                ],
+              ),
               image: DecorationImage(
                   image: AssetImage("assets/images/bg.png"),
                   fit: BoxFit.cover)),
@@ -49,7 +55,6 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             Row(
               children: [
-                
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   decoration: BoxDecoration(
@@ -72,12 +77,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         selectedCountryCode = newValue!;
                       });
                     },
-                    underline: SizedBox(),
+                    underline: const SizedBox(),
                   ),
                 ),
                 const SizedBox(width: 10),
-
-                
                 Expanded(
                   child: TextField(
                     keyboardType: TextInputType.phone,
@@ -87,8 +90,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         borderRadius: BorderRadius.circular(20),
                         gradient: const LinearGradient(
                           colors: [
-                            Color(0xFF8354FF), // #8354FF
-                            Color(0xFFDD3562), // #DD3562
+                            Color(0xFF8354FF),
+                            Color(0xFFDD3562),
                           ],
                         ),
                         width: 2.0,
