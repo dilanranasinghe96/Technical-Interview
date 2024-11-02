@@ -20,6 +20,9 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           Column(
             children: [
+              const SizedBox(
+                height: 100,
+              ),
               const Text("Login"),
               const Text('Please enter your valid phone number.'),
               const Text("we will send you a 4-digit code to verify"),
@@ -37,9 +40,16 @@ class _LoginScreenState extends State<LoginScreen> {
               const Row(
                 children: [
                   CircleAvatar(
-                    child: Icon(Icons.facebook),
+                    backgroundColor: Colors.blue,
+                    child: Stack(
+                      children: [Icon(Icons.facebook)],
+                    ),
                   ),
-                  CircleAvatar(child: Icon(Icons.mail))
+                  CircleAvatar(
+                      backgroundColor: Colors.red,
+                      child: Stack(
+                        children: [Icon(Icons.mail)],
+                      ))
                 ],
               )
             ],
